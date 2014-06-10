@@ -38,5 +38,6 @@ class ChangeTest < MiniTest::Unit::TestCase
   def test_that_quarters_work
     assert_equal({:quarters => 2, :dimes => 0, :nickels => 0, :pennies => 1}, Change.new(0.51).make_change)
     assert_equal({:quarters => 2, :dimes => 1, :nickels => 1, :pennies => 1}, Change.new(0.66).make_change)
+    assert_equal({:quarters => 3, :dimes => 0, :nickels => 1, :pennies => 1}, Change.new(0.81).make_change)
   end
 end
